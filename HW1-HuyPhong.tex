@@ -1,0 +1,132 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mhchem}
+\usepackage{stmaryrd}
+
+\title{Homework 1 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+Lê Huy Phong - 11203096
+
+
+\section{Ex.1}
+a.
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+Total & $0.16$ & $0.17$ & $0.11$ & $0.22$ & $0.34$ & 1 \\
+\hline
+$\mathrm{y}_{1}$ & $0.01$ & $0.02$ & $0.03$ & $0.1$ & $0.1$ & $0.26$ \\
+\hline
+$\mathrm{y}_{2}$ & $0.05$ & $0.1$ & $0.05$ & $0.07$ & $0.2$ & $0.47$ \\
+\hline
+$\mathrm{y}_{3}$ & $0.01$ & $0.05$ & $0.03$ & $0.05$ & $0.04$ & $0.27$ \\
+\hline
+ & $\mathrm{x}_{1}$ & $\mathrm{x}_{2}$ & $\mathrm{x}_{3}$ & $\mathrm{x}_{4}$ & $\mathrm{x}_{5}$ & Total \\
+\hline
+\end{tabular}
+
+After computed the above table, we have the marginal distributions of $p(x)$ and $p(y)$ :
+
+\begin{itemize}
+  \item The marginal distributions $p(x)$ :
+\end{itemize}
+$p\left(x_{1}\right)=0.16, p\left(x_{2}\right)=0.17, p\left(x_{3}\right)=0.11, p\left(x_{4}\right)=0.22, p\left(x_{5}\right)=0.34$
+
+\begin{itemize}
+  \item The marginal distributions $p(y)$ :
+\end{itemize}
+$p\left(y_{1}\right)=0.26, p\left(y_{2}\right)=0.47, p\left(y_{3}\right)=0.27$
+
+b. $\mathrm{p}\left(\mathrm{x}_{i} \mid Y=y_{1}\right)$ :
+$$
+p\left(x_{i} \mid Y=y_{1}\right)=\frac{p\left(x_{i}, Y=y 1\right)}{p\left(Y=y_{1}\right)}=\frac{p\left(x_{i}, Y=y 1\right)}{0.26}
+$$
+Calculate the conditional probability $\mathrm{p}\left(\mathrm{x}_{i} \mid Y=y_{1}\right)$ :
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\mathrm{i}$ & 1 & 2 & 3 & 4 & 5 \\
+\hline
+$\mathrm{p}\left(\mathrm{x}_{i} \mid Y=y_{1}\right)$ & $1 / 26$ & $1 / 13$ & $3 / 26$ & $5 / 13$ & $5 / 12$ \\
+\hline
+\end{tabular}
+
+$\mathrm{p}\left(\mathrm{x}_{i} \mid Y=y_{3}\right)$ :
+$$
+p\left(x_{i} \mid Y=y_{3}\right)=\frac{p\left(x_{i}, Y=y 3\right)}{p\left(Y=y_{3}\right)}=\frac{p\left(x_{i}, Y=y 3\right)}{0.27}
+$$
+Calculate the conditional probability $\mathrm{p}\left(\mathrm{x}_{i} \mid Y=y_{3}\right)$ :
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$\mathrm{i}$ & 1 & 2 & 3 & 4 & 5 \\
+\hline
+$\mathrm{p}\left(\mathrm{x}_{i} \mid Y=y_{3}\right)$ & $10 / 27$ & $5 / 27$ & $1 / 9$ & $5 / 27$ & $4 / 27$ \\
+\hline
+\end{tabular}
+
+\section{Ex.2}
+Proof: IF X & Y are Discrete
+$$
+\begin{gathered}
+E_{y}\left[E_{x}[x \mid y]\right]=\sum_{y} E[X \mid Y=y] \cdot P(Y=y) \\
+=\sum_{y} \sum_{x} x \cdot P[X=x \mid Y=y] \cdot P(Y=y) \\
+=\sum_{y} \sum_{x} x \cdot P[Y=y \mid X=x] \cdot P(X=x) \\
+=\sum_{x} x \cdot P(X=x) \cdot \sum_{y} P[Y=y \mid X=x] \\
+=E_{x}[X] \cdot 1=E_{x}[X] \\
+\left(\text { Note }: \sum_{y} P[Y=y \mid X=x]=1\right)
+\end{gathered}
+$$
+
+\section{Ex.3}
+$P(X)=0,207\\ P(Y)=0,5\\ P(X \mid Y)=0,365$\\
+a. Prob of people Using both X and Y \\$P(X Y)=P(Y) \cdot P(X \mid Y)=0,5 \cdot 0,365=0,1825$\\
+b. We idicate that the people not using X is $\bar{X}$\\
+the people not using Y is $\bar{Y}$$\\
+$P(Y \mid \bar{X})=\frac{P(y. \bar{X})}{P(\bar{X})}=\frac{P(Y).P(\bar{X}\mid Y)}{1 - P(X)} = 0.4004$
+
+
+\section{Ex.4}
+Proof:
+
+$V_{x}=\sum_{x}(x-\mu)^{2} \cdot P(x)$
+
+$=E_{x}\left[(x-\mu)^{2}\right]$
+
+$=E_{x}\left[x^{2}-2 \mu x+\mu^{2}\right]$
+
+$=E_{x}\left[x^{2}\right]-2 \mu E_{x}[x]+\mu^{2}$
+
+$=E_{x}\left[x^{2}\right]-2 \mu \mu+\mu^{2}$
+
+$=E_{x}\left[x^{2}\right]-\mu^{2}$
+
+$=E_{x}\left[x^{2}\right]-\left(E_{x}[x]\right)^{2}$
+
+\section{Ex.5}
+Ban đầu chọn ô cửa số 1. Lấy $\mathrm{A}$ là biến cố chiếc xe ở ô cửa 1 (chọn ban đầu), B là biến cố Monty mở ô cửa 2 .
+$$
+\Rightarrow P(A)=\frac{1}{3}
+$$
+Ta có: $=>P(B A)=\frac{1}{2}$ là xác suất Monty mở ô cửa 2 khi chiếc xe ở ô cửa 1 do khi đó ông ấy chỉ mở cửa số 2 hoặc 3
+
+$P(B)=\frac{1}{2}$ là xác suất Monty mở ô cửa 2 vì ông ấy phải mở 1 trong 2 cửa còn lại mà khác với cửa đã chọn
+
+$P(A \mid B)=\frac{1}{3}$ : xác suất chiếc xe nằm ở cô cửa 1 khi Monty đã mở ô cửa 2
+
+Gọi $\mathrm{C}$ là biến cố xe nằm ở ô cửa số 3 . $\mathrm{A}$ và $\mathrm{C}$ là 2 biến cố xung khắc (do xe chỉ ở ô cửa 1 hoặc ô cửa 3) nên $P(C)=1-P(A)=\frac{2}{3}$
+
+Kết luận: Thực hiện thay đổi ô cửa đã chọn sẽ tăng xác suất trúng xe hơn so với giữ nguyên
+
+
+\end{document}
